@@ -1,0 +1,39 @@
+
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: grey;
+  align-self: center;
+ 
+}
+
+#bar-plot { width: 99%;
+  height: 500px;
+  align-self: right;
+}
+
+#plot { width: 99%;
+  height: 500px;
+  align-self: right;
+
+}
+
+h1 {
+  text-align: center;
+  animation: ease-in;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: steelblue;
+}
+
+h2 {
+  text-align: center;
+  animation: ease-in;
+  font-family: 'Lucida Sans';
+  color: rgb(8, 48, 82);
+}
+
+h3 {  animation: ease-in;
+  font-family: 'Lucida Sans';
+  color: slategrey;
+
+}

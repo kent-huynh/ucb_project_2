@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Housing Price Growth Per City</title>
+  <!-- Boostrap Stylesheet -->
+  <link rel=“stylesheet” href=“assets/css/bootstrap.min.css” media=“screen”>
+
+  <!--Plotly -->
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Leaflet CSS & JS -->
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+  integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+  crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+  integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+  crossorigin=""></script>
+
+  <!-- Our CSS -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+  <!-- The div where we will inject our map -->
+  <div class=“container”></div>
+  <div class=“row”>
+    <div class=“col-md-12 jumbotron text-center”>
+        <h1>Housing Prices and Trends in the US</h1>
+        <h2> Use the interactive dashboard below to explore the dataset</h2>
+        <h3>OVERVIEW:            </h3>
+      </div>
+    </div>
+
+  <div id="map"></div>
+
+  <h3>Plots:</h3>
+
+  <select id="selDataset" onchange="getBars(this.value)">
+    <option value="dataset4">2010-2012</option>
+    <option value="dataset5">2013-2015</option>
+    <option value="dataset6">2016-2018</option>
+  </select>
+
+    <!-- The div bar plot -->
+    <div id="bar-plot"></div>
+
+  <!-- The div drop down-->
+  <select id="selDataset" onchange="getData(this.value)">
+    <option value="dataset1">2010-2012</option>
+    <option value="dataset2">2013-2015</option>
+    <option value="dataset3">2016-2018</option>
+  </select>
+
+  <!-- The div scatter plot -->
+      <div id="plot"></div>
+
+
+  <!-- Leaflet API key -->
+  <script type="text/javascript" src="config.js"></script>
+  <!-- Leaflet -->
+  <script type="text/javascript" src="logic.js"></script>
+
+    <!-- Barplot -->
+    <script src="plots.js"></script>
+
+      <!-- Scatter -->
+      <script src="scatter.js"></script>
+      <p>save me!</p>
+</body>
+</html>
